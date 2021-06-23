@@ -1,9 +1,10 @@
 .container {
+  height: 100vh;
   display: -ms-grid;
   display: grid;
-  grid-column: auto;
-  -ms-grid-rows: 75px 500px 100px 100px;
-      grid-template-rows: 75px 500px 100px 100px;
+  -ms-grid-rows: 75px 1fr 150px;
+      grid-template-rows: 75px 1fr 150px;
+      grid-template-areas: 'header header' 'content side' 'footer footer';
 }
 
 .container > div {
@@ -13,17 +14,31 @@
 
 .box1 {
   background: green;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: header;
 }
 
 .box2 {
   background: blue;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: content;
 }
 
 .box3 {
   background: red;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: side;
 }
 
 .box4 {
   background: purple;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: footer;
 }
 /*# sourceMappingURL=styles.css.map */

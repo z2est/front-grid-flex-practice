@@ -1,8 +1,12 @@
 
 .container {
+    height: 100vh;
     display: grid;
-    grid-column: auto;
-    grid-template-rows: 75px 500px 100px 100px;
+    //grid-template-rows: 75px 500px 100px 100px;
+    grid-template-rows: 75px 1fr 150px;
+    grid-template-areas: 'header header'
+                         'content side'
+                         'footer footer';
 
 }
 
@@ -13,16 +17,20 @@
 
 .box1 {
     background: green;
+    grid-area: header;
 }
 
 .box2 {
     background: blue;
+    grid-area: content;
 }
 
 .box3 {
     background: red;
+    grid-area: side;
 }
 
 .box4 {
     background: purple;
+    grid-area: footer;
 }
