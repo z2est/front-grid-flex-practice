@@ -1,0 +1,28 @@
+
+.container {
+    display: grid;
+    grid-column: auto;
+    grid-template-rows: 75px 500px 100px 100px;
+
+}
+
+.container > div {
+    width: 100%;
+    height: 100%;
+}
+
+.box1 {
+    background: green;
+}
+
+.box2 {
+    background: blue;
+}
+
+.box3 {
+    background: red;
+}
+
+.box4 {
+    background: purple;
+}
