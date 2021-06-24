@@ -1,0 +1,49 @@
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 75px 1fr 150px;
+    grid-template-areas: 'header header'
+                         'content side'
+                         'footer footer';
+    grid-gap: 10px;
+
+}
+
+.container > div {
+    width: 100%;
+    height: 100%;
+}
+
+.box1 {
+    background: green;
+    grid-area: header;
+}
+
+.box2 {
+    background: blue;
+    grid-area: content;
+}
+
+.box3 {
+    background: red;
+    grid-area: side;
+}
+
+.box4 {
+    background: purple;
+    grid-area: footer;
+}
+
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
